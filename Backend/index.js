@@ -12,11 +12,18 @@ const app = express();
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
+// const corsOptions = {
+//   origin: 'https://iccsi-site-2985.vercel.app/',
+//   methods: ['GET', 'POST'],
+//   credentials: true,
+// };
+
 const corsOptions = {
-  origin: 'https://iccsi-site-2985.vercel.app/',
+  origin: '*',  // This allows requests from any origin
   methods: ['GET', 'POST'],
   credentials: true,
 };
+
 
 app.use(cors(corsOptions));
 app.use(express.json());
