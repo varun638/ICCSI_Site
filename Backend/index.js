@@ -13,7 +13,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 const corsOptions = {
-  origin: 'http://localhost:5173',
+  origin: 'https://iccsi-site-2985.vercel.app/',
   methods: ['GET', 'POST'],
   credentials: true,
 };
