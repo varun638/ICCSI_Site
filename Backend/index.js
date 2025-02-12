@@ -30,7 +30,7 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.get('/'),async (req, res) => {
+app.get('/api/hellow'),async (req, res) => {
 return res.status(200).json(' successfully' );
 }
 app.post('/api/contact', async (req, res) => {
