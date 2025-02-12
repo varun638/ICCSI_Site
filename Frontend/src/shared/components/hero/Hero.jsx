@@ -10,7 +10,7 @@ export default function Hero({ props , handleRegisterClick}) {
       <section
         className="min-h-screen bg-cover bg-center relative w-full flex items-center justify-center"
         style={{
-          backgroundImage: 'url("public/assets/images/Home/bg_img.jpg")',
+          backgroundImage: 'url("assets/images/Home/bg_img.jpg")',
           backgroundBlendMode: 'overlay',
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
         }}

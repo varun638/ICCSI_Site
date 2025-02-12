@@ -9,7 +9,7 @@ const committeeMembers = [
           name: "Dr. David Johnson",
           title: "Professor of Computer Science",
           institution: "Stanford University",
-          image: "public/assets/images/About/m1.jpg"
+          image: "assets/images/About/m1.jpg"
         }
       ]
     },
@@ -20,19 +20,19 @@ const committeeMembers = [
           name: "Dr. Michael Chen",
           title: "Associate Professor",
           institution: "MIT",
-          image: "public/assets/images/About/m2.jpg"
+          image: "assets/images/About/m2.jpg"
         },
         {
           name: "Dr. Emily Williams",
           title: "Research Director",
           institution: "Google Research",
-          image: "public/assets/images/About/m3.jpg"
+          image: "assets/images/About/m3.jpg"
         },
         {
           name: "Dr. Marco James",
           title: "Research Scientist",
           institution: "microsoft ",
-          image: "public/assets/images/About/m4.jpg"
+          image: "assets/images/About/m4.jpg"
         }
       ]
     }

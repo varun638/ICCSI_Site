@@ -1,7 +1,7 @@
 import React from 'react';
 import { MapPin, Calendar, Clock, Users } from 'lucide-react';
 
-const Registercta = ({handleRegisterClick}) => {
+const Registercard = ({handleRegisterClick}) => {
   return (
     <section className="relative bg-gradient-to-br from-blue-50 via-white to-blue-50 py-12 sm:py-16 md:py-20">
       {/* Decorative Elements - Responsive sizing */}
@@ -85,4 +85,4 @@ const Registercta = ({handleRegisterClick}) => {
   );
 };
 
-export default Registercta;
+export default Registercard;

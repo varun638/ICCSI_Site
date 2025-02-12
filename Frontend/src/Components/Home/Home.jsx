@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Hero from '../../shared/components/hero/Hero';
 import Speakers from '../../shared/components/speakers/Speakers';
 import { useNavigate } from 'react-router';
-import Registercta from '../../shared/Register_cta/Registercta';
+import Registercard from '../../shared/Register_cta/Registercard';
 
 export default function Home() {
   const [count, setCount] = useState(0);
@@ -38,7 +38,7 @@ export default function Home() {
      <Hero props={count} handleRegisterClick = {handleRegisterClick}/>
       <About />
       <Speakers />
-      <Registercta handleRegisterClick = {handleRegisterClick}/>
+      <Registercard handleRegisterClick = {handleRegisterClick}/>
       <Contact />
     </div>
   );
