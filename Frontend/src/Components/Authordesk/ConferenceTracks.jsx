@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Brain, Shield, Cloud, Database, Notebook as Robot } from 'lucide-react';
-import Conferencetrack from '../../shared/components/Authors/conferencetrack';
+import Conferencetrack from '../../shared/components/Authors/Conferencetrack';
 
 export default function ConferenceTracks() {
   const tracks = [

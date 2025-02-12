@@ -12,7 +12,7 @@ export default function Abouts({props}) {
             <div className="w-full lg:w-1/2 relative">
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="public/assets/images/About/about_img.avif"
+                  src="assets/images/About/about_img.avif"
                   alt="ICCSI Conference"
                   className="w-full h-[300px] sm:h-[400px] object-cover"
                 />

@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import Hero from '../../shared/components/hero/Hero';
 import Speakers from '../../shared/components/speakers/Speakers';
 import { useNavigate } from 'react-router';
-import Registercta from '../../shared/Register_cta/registercta';
+import Registercta from '../../shared/Register_cta/Registercta';
 
 export default function Home() {
   const [count, setCount] = useState(0);
