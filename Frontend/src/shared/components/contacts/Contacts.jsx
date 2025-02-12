@@ -59,7 +59,7 @@ export default function Contacts({ props }) {
     setLoading(true); // Set loading to true before submitting
 
     try {
-      await axiosinstance.post('/api/contact', formData, { withCredentials: true });
+      await axiosinstance.post('https://vercel.com/varun-ss-projects-73a2676b/iccsi-site-2985/api/contact', formData, { withCredentials: true });
       setSuccessMessage('Message sent successfully!');
       setFormData({ user_name: '', user_email: '', user_location: '', message: '' });
     } catch (error) {
