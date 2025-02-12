@@ -120,7 +120,7 @@ export default function SubmitPaper() {
     formDataToSend.append('paperFile', formData.paperFile);
 
     try {
-      await axiosinstance.post('https://iccsi-site.vercel.app/api/submit-paper', formDataToSend, {
+      await axiosinstance.post('/api/submit-paper', formDataToSend, {
         headers: {
           'Content-Type': 'multipart/form-data',
         }

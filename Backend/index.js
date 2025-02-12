@@ -19,7 +19,7 @@ const upload = multer({ storage: storage });
 // };
 
 const corsOptions = {
-  origin: '*',  // This allows requests from any origin
+  origin: 'https://iccsi-site-2985.vercel.app/',  // This allows requests from any origin
   methods: ['GET', 'POST'],
   credentials: true,
 };
