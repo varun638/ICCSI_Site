@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create an Axios instance
 const axiosinstance = axios.create({
-  baseURL: 'http://localhost:3000',  // Base URL of your backend API
+  baseURL: 'https://iccsi-site.vercel.app/',  // Base URL of your backend API
   headers: {
     'Content-Type': 'application/json',  // Set default headers
   },
