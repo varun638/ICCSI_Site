@@ -12,12 +12,6 @@ const app = express();
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
-// const corsOptions = {
-//   origin: 'https://iccsi-site-2985.vercel.app/',
-//   methods: ['GET', 'POST'],
-//   credentials: true,
-// };
-
 const corsOptions = {
   origin: 'https://iccsi-site-2985.vercel.app',  // This allows requests from any origin
   methods: ['GET', 'POST'],
@@ -37,9 +31,6 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.get('/api/hellow',async (req, res) => {
- res.status(200).json(' successfully' );
-});
 app.post('/api/contact', async (req, res) => {
   const { user_name, user_email, user_location, message } = req.body;
 
