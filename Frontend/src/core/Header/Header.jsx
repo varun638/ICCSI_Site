@@ -25,6 +25,7 @@ const navigationItems = [
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState(null);
+  const [previousLocation, setPreviousLocation] = useState(useLocation().pathname); // Track the previous location
   const location = useLocation();
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
@@ -34,13 +35,11 @@ export default function Header() {
   };
 
   const handleLinkClick = () => {
-    window.scrollTo(0, 0);
     setOpenDropdown(null);
     setIsMenuOpen(false);
   };
 
   const handleRegisterClick = () => {
-    window.scrollTo(0, 0);
     setIsMenuOpen(false);
     navigate('/author/new_paper_submission');
   };
@@ -57,21 +56,14 @@ export default function Header() {
   }, []);
 
   useEffect(() => {
-    if (location.pathname === '/') {
-      setIsMenuOpen(false);
+    if (location.pathname !== previousLocation) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth', // Enable smooth scrolling
+      });
+      setPreviousLocation(location.pathname); // Update the previous location state
     }
-  }, [location.pathname]);
-
-  useEffect(() => {
-    if (location.hash) {
-      const targetElement = document.querySelector(location.hash);
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  }, [location]);
+  }, [location, previousLocation]); // Add previousLocation to the dependency array
 
   const isActive = (path, subItems = []) => {
     if (location.pathname === path || location.hash === path) {
@@ -86,7 +78,7 @@ export default function Header() {
         <li key={item.name}>
           <Link
             to={item.path}
-            className={`block py-1 hover:bg-blue-100 text-sm ${isActive(item.path) ? 'text-blue-600 font-bold' : 'text-gray-600'}`}
+            className={`block py-1 hover:bg-blue-100 text-sm ${isActive(item.path) ? 'text-blue-600' : 'text-gray-600'}`}
             onClick={handleLinkClick}
           >
             {item.name}
@@ -108,8 +100,8 @@ export default function Header() {
           <Link to={item.path} className="flex items-center">
             {item.name}
             {item.dropdown && (
-              openDropdown === item.name ? <ChevronDown className="ml-2 h-4 w-4 text-gray-600" /> : 
-              <ChevronUp className="ml-2 h-4 w-4 text-gray-600" />
+              openDropdown === item.name ? <ChevronUp className="ml-2 h-4 w-4 text-gray-600" /> : 
+              <ChevronDown className="ml-2 h-4 w-4 text-gray-600" />
             )}
           </Link>
         </button>

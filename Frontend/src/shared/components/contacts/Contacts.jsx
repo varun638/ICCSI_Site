@@ -88,7 +88,7 @@ export default function Contacts({ props }) {
       {/* Contact Header */}
       <div className="bg-blue-900 text-white py-16 ">
         <div className="container mx-auto px-4 text-center">
-          <h1 className={`text-54xl sm:text-5xl md:text-6xl font-bold mb-6 ${props ? 'mt-15' : ''}`} >Get in Touch</h1>
+        <h1 className={`text-4xl sm:text-5xl md:text-6xl lg:text-6xl xl:text-6xl font-bold mb-6 ${props ? 'mt-10' : 'mt-4'}`}>Get in Touch</h1>
           <p className="text-xl sm:text-xl md:text-2xl max-w-3xl mx-auto">
             Have questions about ICCSI? We’re here to help! Feel free to reach out.
           </p>
