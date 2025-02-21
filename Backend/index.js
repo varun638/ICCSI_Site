@@ -32,7 +32,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/api/contact', async (req, res) => {
-  const { user_name, user_email, user_location, message } = req.body;
+  const { user_name, user_email, user_phone, message } = req.body;
 
   try {
     await transporter.sendMail({
@@ -43,7 +43,7 @@ app.post('/api/contact', async (req, res) => {
         <h3>New Contact Form Submission</h3>
         <p><strong>Name:</strong> ${user_name}</p>
         <p><strong>Email:</strong> ${user_email}</p>
-        <p><strong>Location:</strong> ${user_location}</p>
+        <p><strong>Location:</strong> ${user_phone}</p>
         <p><strong>Message:</strong> ${message} </p>
       `
     });

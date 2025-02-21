@@ -26,13 +26,14 @@ export default function Abouts({props}) {
             {/* Content Container */}
             <div className="w-full lg:w-1/2 justify-center">
               <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-                About <span className="text-blue-600">ICCSI</span>
+                About <span className="text-blue-600">INCOCSA</span>
               </h1>
               <p className="text-lg text-gray-700 leading-relaxed mb-6 text-justify">
-                The International Conference on Computer Science Innovations (ICCSI) stands as a 
-                beacon of technological advancement, uniting brilliant minds from across the globe. 
-                Our mission is to foster groundbreaking discussions and showcase revolutionary 
-                developments in computer science.
+              The International Conference on Computer Science and Applications gathers experts and researchers 
+              to explore advancements in fields such as Artificial Intelligence, Machine Learning, Data Science, Cybersecurity,
+              Cloud Computing, IoT, Software Engineering, and more. The conference offers a platform for knowledge sharing,
+              collaboration, and networking across academia, industry, and government, featuring keynote talks, paper presentations, 
+              and workshops on emerging technologies in computer science.
               </p>
               <div className="flex  items-center">
                 <div className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors" >

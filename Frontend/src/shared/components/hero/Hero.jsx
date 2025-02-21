@@ -16,11 +16,11 @@ export default function Hero({ props , handleRegisterClick}) {
         }}
       >
         <div className="text-center text-white px-4">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            International Conference on Computer Science Innovations
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-6">
+          International Conference on Computer Science and Applications
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-8">
-            The Ultimate IT Conference for Innovation
+          Exploring Innovation, Shaping the Future of Technology
           </p>
           {/* Event Details */}
           <div className="flex flex-wrap justify-center gap-4 mb-8">

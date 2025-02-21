@@ -7,8 +7,8 @@ export default function Keydate(props) {
       <div className="container mx-auto px-4 py-16 max-w-6xl">
         {/* Title Section */}
         <div className="text-center mb-16 mt-10">
-          <h1 className="text-4xl sm:text-4xl md:text-5xl font-bold text-gray-800 leading-tight mb-6">
-            Important Dates
+          <h1 className="text-4xl sm:text-4xl font-bold text-gray-900 leading-tight mb-6">
+                Important <span className="text-blue-600">Dates</span>
           </h1>
           <p className="text-xl sm:text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto">
             Mark your calendar for these key events to stay ahead of deadlines.
@@ -22,30 +22,30 @@ export default function Keydate(props) {
 
           {/* Timeline Entries */}
           <div className="space-y-20">
-            {props.dates.map((item, index) => (
-              <div
-                key={index}
-                className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-              >
-                {/* Date marker */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
-                  <Calendar className="w-7 h-7 text-white" />
-                </div>
+          {props.dates.map((item, index) => (
+            <div
+              key={index}
+              className={`relative flex flex-col items-center md:flex-row ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+            >
+              {/* Date marker (centered) */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 flex justify-center items-center w-14 h-14 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full z-10 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110">
+                <Calendar className="w-7 h-7 text-white" />
+              </div>
 
-                {/* Event Card */}
-                <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-16' : 'md:pl-16'} mt-8 md:mt-0`}>
-                  <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_25px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1">
-                    <div className="flex items-center mb-4">
-                      <Clock className="w-5 h-5 text-blue-600 mr-3" />
-                      <h3 className="text-xl sm:text-xl md:text-2xl font-semibold text-gray-900">{item.date}</h3>
-                    </div>
-                    <h4 className="text-blue-600 font-semibold text-lg sm:text-lg md:text-xl mb-3">{item.event}</h4>
-                    <p className="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">{item.description}</p>
+              {/* Event Card */}
+              <div className="w-full md:w-6/12 mt-8 md:mt-0 flex justify-center">
+                <div className="bg-white p-8 rounded-2xl shadow-[0_4px_20px_rgba(0,0,0,0.08)] hover:shadow-[0_4px_25px_rgba(0,0,0,0.12)] transition-all duration-300 transform hover:-translate-y-1">
+                  <div className="flex items-center mb-4">
+                    <Clock className="w-5 h-5 text-blue-600 mr-5" />
+                    <h3 className="text-xl sm:text-xl md:text-2xl font-semibold text-gray-900">{item.date}</h3>
                   </div>
+                  <h4 className="text-blue-600 font-semibold text-lg sm:text-lg md:text-xl mb-3">{item.event}</h4>
+                  <p className="text-gray-600 leading-relaxed text-sm sm:text-base md:text-lg">{item.description}</p>
                 </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
+        </div>
         </div>
 
         {/* Time Zone Information Section */}

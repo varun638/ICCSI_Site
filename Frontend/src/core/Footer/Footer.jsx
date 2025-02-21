@@ -12,15 +12,18 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white">
-      <div className="container mx-auto px-8 py-12"> {/* Increased padding here */}
+      <div className="container mx-auto px-8 py-12 mt-3"> {/* Increased padding here */}
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8"> {/* Increased gap for better spacing */}
           {/* About Section */}
           <div className="space-y-3">
-            <h3 className="text-2xl font-bold">ICCSI</h3>
-            <p className="text-gray-400 lg:text-lg md:text-sm">
-              The ultimate IT conference for innovation and networking in the tech industry.
-            </p>
+          <Link to="/">
+            <img
+            src="/assets/images/logo/logo.png"
+            alt="ICOCSA Logo"
+            className="h-auto max-h-[10vh] sm:max-h-[14vh] md:max-h-[14vh] lg:max-h-[10vh] xl:max-h-[18vh] w-auto"
+          />
+          </Link>
           </div>
 
           {/* Services Section - Plain Text */}
@@ -39,7 +42,7 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-3">Contact Info</h4>
             <ul className="space-y-2 text-gray-400 lg:text-lg md:text-sm">
               <li>123 Vit Street Vellore, Tamil Nadu, 632014</li>
-              <li>info@iccsi.com</li>
+              <li>info@.com</li>
               <li>+91 9876543219</li>
             </ul>
           </div>
@@ -65,7 +68,7 @@ export default function Footer() {
       {/* Copyright Section */}
       <div className="pt-4 pb-4 border-t border-gray-800"> {/* Increased padding here */}
         <div className="text-center text-gray-400 lg:text-lg md:text-sm">
-          <p>&copy; {new Date().getFullYear()} ICCSI. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} INCOCSA. All rights reserved.</p>
         </div>
       </div>
     </footer>

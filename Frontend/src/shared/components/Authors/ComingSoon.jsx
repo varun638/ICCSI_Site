@@ -4,7 +4,8 @@ import { Calendar, MapPin } from 'lucide-react';
 export default function ComingSoon() {
   return (
     <div className="min-h-[calc(100vh-theme(spacing.16))] flex items-center justify-center bg-gradient-to-b from-blue-50 to-white">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h1 className="text-4xl sm:text-4xl font-bold text-gray-800 leading-tight"> Comming Soon </h1>
+      {/* <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-4xl sm:text-4xl font-bold text-gray-800 mb-4 leading-tight mt-25">
           International Conference on Computer Science Innovations
         </h1>
@@ -47,7 +48,7 @@ export default function ComingSoon() {
             className="rounded-lg shadow-lg mx-auto"
           />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

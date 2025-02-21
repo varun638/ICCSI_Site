@@ -5,7 +5,9 @@ export default function Orgzcomit(props) {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-gray-200 to-white pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl sm:text-4xl font-bold text-gray-600 mb-4 leading-tight mt-10">Organizing Committee</h1>
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight mt-10">
+           Organizing <span className="text-blue-600">Committee</span>
+              </h1>
           <p className="mt-4 text-xl text-gray-600">Meet the team behind ICCSI 2025</p>
         </div>
 

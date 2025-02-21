@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { FileText, CheckCircle, AlertCircle } from 'lucide-react';
-import toast from 'react-hot-toast';
 import axiosinstance from '../../services/axios';
 
 export default function SubmitPaper() {
@@ -160,7 +159,9 @@ export default function SubmitPaper() {
     <div className="min-h-[calc(100vh-theme(spacing.16))] flex items-center justify-center bg-gradient-to-b from-gray-300 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-4xl font-bold text-gray-800 leading-tight mb-4 mt-25">Submit Your Paper</h1>
+        <h1 className="text-4xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight mt-25">
+                Submit The <span className="text-blue-600">Paper</span>
+        </h1>
           <p className="text-xl text-gray-600">Follow these guidelines to submit your research paper</p>
         </div >
 
@@ -205,7 +206,6 @@ export default function SubmitPaper() {
         </div>
 
         <div className="bg-white p-8 rounded-lg shadow-md mb-12">
-          <h2 className="text-2xl font-bold text-gray-900 mb-6">Submit Your Paper</h2>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div>
               <label className="block text-gray-700 font-medium mb-2">Paper Title *</label>

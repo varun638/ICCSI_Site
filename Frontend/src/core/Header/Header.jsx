@@ -12,14 +12,11 @@ const navigationItems = [
   ]},
   { name: "Author's Desk", dropdown: true, subItems: [
     { name: 'Conference Tracks', path: '/conference_tracks' },
-    { name: 'Coming Soon', path: '/author/journal_publication' },
     { name: 'Key Dates', path: '/author/key_dates' },
     { name: 'Registration Details', path: '/author/registration_details' },
     { name: 'New Paper Submission', path: '/author/new_paper_submission' },
   ]},
-  { name: 'Reach Us', dropdown: true, subItems: [
-    { name: 'Contact Us', path: '/contact' },
-  ]},
+  { name: 'Contact Us', path: '/contact'},
 ];
 
 export default function Header() {
@@ -110,7 +107,7 @@ export default function Header() {
         {item.dropdown && openDropdown === item.name && (
           <div
             ref={dropdownRef}
-            className={`absolute bg-white text-black mt-2 p-4 w-44 text-base rounded-lg shadow-lg z-20 ${isMobile ? 'mt-2' : 'mt-6'}`}
+            className={`absolute bg-white text-black mt-2 p-4 w-44 text-base rounded-lg shadow-lg z-20 ${isMobile ? 'mt-2' : 'mt-3'}`}
           >
             {renderDropdownItems(item.subItems)}
           </div>
@@ -124,11 +121,11 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
-            <img
-              src="/assets/images/logo/logo.png"
-              alt="ICCSI Logo"
-              className="h-8 sm:h-10 md:h-12 lg:h-14 xl:h-16"
-            />
+          <img
+          src="/assets/images/logo/logo.png"
+          alt="ICCSI Logo"
+          className="h-auto max-h-[10vh] sm:max-h-[14vh] md:max-h-[14vh] lg:max-h-[16vh] xl:max-h-[18vh] w-auto"
+        />
           </Link>
 
           {/* Desktop Navigation */}

@@ -14,11 +14,11 @@ export default function Ourmission() {
                Our  <span className="text-blue-600">Mission</span>
               </h1>
               <p className="text-lg text-gray-700 leading-relaxed text-justify">
-                  ICCSI provides a dynamic platform for presenting cutting-edge research, 
-                  fostering meaningful discussions, and building collaborative partnerships 
-                  between academia and industry. We're committed to inspiring innovation 
-                  and driving the future of computer science through knowledge exchange 
-                  and networking opportunities.
+              The mission of the International Conference on Computer Science and Applications
+               is to foster innovation, knowledge exchange, and collaboration among researchers, professionals,
+              and organizations in the field of computer science. We aim to explore and discuss cutting-edge technologies,
+              promote advancements in key areas such as AI, cybersecurity, data science, and more, and drive the future of 
+              computer science through global collaboration and networking.
                 </p>
             </div>
             {/* Right side image */}

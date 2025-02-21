@@ -6,14 +6,14 @@ export default function Contacts({ props }) {
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',
-    user_location: '',
+    user_phone: '',
     message: ''
   });
 
   const [errors, setErrors] = useState({
     user_name: '',
     user_email: '',
-    user_location: '',
+    user_phone: '',
     message: ''
   });
 
@@ -33,11 +33,14 @@ export default function Contacts({ props }) {
       validationErrors.user_name = 'Name must be less than or equal to 40 characters';
     }
 
-    if (!formData.user_location) {
-      validationErrors.user_location = 'Location is required';
-    } else if (formData.user_location.length > 200) {
-      validationErrors.user_location = 'Location must be less than or equal to 200 characters';
+    if (!formData.user_phone) {
+      validationErrors.user_phone = 'Phone number is required';
+    } else if (!/^\+?[1-9]\d{1,14}$/.test(formData.user_phone)) {
+      validationErrors.user_phone = 'Phone number must be a valid format (e.g., +1234567890)';
+    } else if (formData.user_phone.length > 15) {
+      validationErrors.user_phone = 'Phone number must be less than or equal to 15 characters';
     }
+    
 
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     if (!formData.user_email) {
@@ -61,7 +64,7 @@ export default function Contacts({ props }) {
     try {
       await axiosinstance.post('/api/contact', formData, { withCredentials: true });
       setSuccessMessage('Message sent successfully!');
-      setFormData({ user_name: '', user_email: '', user_location: '', message: '' });
+      setFormData({ user_name: '', user_email: '', user_phone: '', message: '' });
     } catch (error) {
       setErrorMessage('Failed to send message. Please try again.');
       console.error('Error:', error);
@@ -127,16 +130,16 @@ export default function Contacts({ props }) {
                 {errors.user_email && <p className="text-red-500 text-sm">{errors.user_email}</p>}
               </div>
               <div>
-                <label className="block text-gray-700 mb-2">Location *</label>
+                <label className="block text-gray-700 mb-2">Mobile Number *</label>
                 <input
-                  type="text"
-                  name="user_location"
-                  value={formData.user_location}
+                  type="number"
+                  name="user_phone"
+                  value={formData.user_phone}
                   onChange={handleChange}
                   className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-blue-500"
-                  placeholder="Your location"
+                  placeholder="Your Mobile Number"
                 />
-                {errors.user_location && <p className="text-red-500 text-sm">{errors.user_location}</p>}
+                {errors.user_phone && <p className="text-red-500 text-sm">{errors.user_phone}</p>}
               </div>
               <div>
                 <label className="block text-gray-700 mb-2">Message *</label>

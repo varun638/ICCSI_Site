@@ -13,8 +13,8 @@ export default function Registration({registrationTypes}) {
       <div className="w-full max-w-screen-xl px-4 sm:px-6,mt-25 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl sm:text-4xl font-bold text-gray-800 leading-tight mb-4 mt-25">
-            Registration Details
+          <h1 className="text-4xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight mt-25">
+                Registration <span className="text-blue-600">Details</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-600 max-w-3xl mx-auto">
             Join us for an enriching experience. Choose your registration package below and be part of this exceptional event.
