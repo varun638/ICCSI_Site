@@ -93,7 +93,7 @@ export default function Footer() {
       {/* Copyright Section */}
       <div className="pt-4 pb-4 border-t border-gray-800"> {/* Increased padding here */}
         <div className="text-center text-gray-400 lg:text-lg md:text-sm">
-          <p>&copy; {new Date().getFullYear()} <a href="https://incosa.org">INCOCSA</a>. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} <a href="https://incosa.org" className='underline underline-offset-2'>INCOCSA</a>. All rights reserved.</p>
         </div>
       </div>
     </footer>
