@@ -122,7 +122,7 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center">
           <img
-          src="/assets/images/logo/logo.png"
+          src="/assets/images/logo/logo.webp"
           alt="ICCSI Logo"
           className="h-auto max-h-[10vh] sm:max-h-[14vh] md:max-h-[14vh] lg:max-h-[16vh] xl:max-h-[18vh] w-auto"
         />

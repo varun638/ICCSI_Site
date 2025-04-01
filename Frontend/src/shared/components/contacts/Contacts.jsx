@@ -181,7 +181,7 @@ export default function Contacts({ props }) {
                   <Mail className="w-6 h-6 text-blue-600 mr-3" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <p className="text-gray-600">info@iccsi.com</p>
+                    <p className="text-gray-600">info@incocsa.org</p>
                   </div>
                 </div>
                 <div className="flex items-center text-lg md:text-xl">

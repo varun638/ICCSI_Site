@@ -42,7 +42,7 @@ const Registercard = ({handleRegisterClick}) => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 text-base sm:text-lg">Date</h3>
-                <p className="text-base sm:text-lg text-gray-700">15th June, 2025</p>
+                <p className="text-base sm:text-lg text-gray-700">5th April, 2025</p>
               </div>
             </div>
           </div>

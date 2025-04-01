@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="space-y-3">
           <Link to="/">
             <img
-            src="/assets/images/logo/logo.png"
+            src="/assets/images/logo/logo.webp"
             alt="ICOCSA Logo"
             className="h-auto max-h-[10vh] sm:max-h-[14vh] md:max-h-[14vh] lg:max-h-[10vh] xl:max-h-[18vh] w-auto"
           />
@@ -42,33 +42,58 @@ export default function Footer() {
             <h4 className="text-lg font-semibold mb-3">Contact Info</h4>
             <ul className="space-y-2 text-gray-400 lg:text-lg md:text-sm">
               <li>123 Vit Street Vellore, Tamil Nadu, 632014</li>
-              <li>info@.com</li>
+              <li>info@incocsa.org</li>
               <li>+91 9876543219</li>
             </ul>
           </div>
 
-          {/* Social Links */}
+         {/* Social Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
-            <div className="flex space-x-4">
-              {[faFacebookF, faTwitter, faLinkedinIn, faInstagram].map((icon, index) => (
+          <h4 className="text-lg font-semibold mb-3">Follow Us</h4>
+          <div className="flex space-x-4">
+            {[faFacebookF, faTwitter, faLinkedinIn, faInstagram].map((icon, index) => {
+              let shareUrl = "#";
+
+              switch (icon) {
+                case faFacebookF:
+                  shareUrl = "https://www.facebook.com/sharer/sharer.php?u=https://incocsa.org";
+                  break;
+                case faTwitter:
+                  shareUrl = "https://twitter.com/intent/tweet?url=https://incocsa.org";
+                  break;
+                case faLinkedinIn:
+                  shareUrl = "https://www.linkedin.com/sharing/share-offsite/?url=https://incocsa.org";
+                  break;
+                case faInstagram:
+                  // Instagram doesn't support direct sharing URL, so we'll leave it like this.
+                  // You can omit Instagram or redirect to its homepage.
+                  shareUrl = "https://www.instagram.com/";
+                  break;
+                default:
+                  break;
+              }
+
+              return (
                 <a
                   key={index}
-                  href="#"
+                  href={shareUrl}
+                  target="_blank"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
                   <FontAwesomeIcon icon={icon} className="w-6 h-8" />
                 </a>
-              ))}
-            </div>
+              );
+            })}
           </div>
         </div>
-      </div>
+        </div>
+        </div>
+
 
       {/* Copyright Section */}
       <div className="pt-4 pb-4 border-t border-gray-800"> {/* Increased padding here */}
         <div className="text-center text-gray-400 lg:text-lg md:text-sm">
-          <p>&copy; {new Date().getFullYear()} INCOCSA. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} <a href="https://incosa.org">INCOCSA</a>. All rights reserved.</p>
         </div>
       </div>
     </footer>

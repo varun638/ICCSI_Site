@@ -14,7 +14,7 @@ export default function Speakers() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {/* Speaker 1 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="assets/images/Home/Martniez.jpg" alt="Martinez Fernandez" className="w-full" />
+              <img src="assets/images/Home/Martniez.webp" alt="Martinez Fernandez" className="w-full" />
               <div className="p-4">
                 <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">Martinez Fernandez</h3>
                 <p className="text-gray-600 mb-3 text-sm sm:text-base md:text-lg">AI & Ethics Expert</p>
@@ -27,7 +27,7 @@ export default function Speakers() {
 
             {/* Speaker 2 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="assets/images/Home/tamil.jpg" alt="Tamil Azhagan" className="w-full" />
+              <img src="assets/images/Home/tamil.webp" alt="Tamil Azhagan" className="w-full" />
               <div className="p-4">
                 <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">Tamil Azhagan</h3>
                 <p className="text-gray-600 mb-3 text-sm sm:text-base md:text-lg">Cybersecurity Specialist</p>
@@ -40,7 +40,7 @@ export default function Speakers() {
 
             {/* Speaker 3 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="assets/images/Home/mus.jpg" alt="Malik Musamir" className="w-full" />
+              <img src="assets/images/Home/mus.webp" alt="Malik Musamir" className="w-full" />
               <div className="p-4">
                 <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">Malik Musamir</h3>
                 <p className="text-gray-600 mb-3 text-sm sm:text-base md:text-lg">Data Science Leader</p>
@@ -53,7 +53,7 @@ export default function Speakers() {
 
             {/* Speaker 4 */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden">
-              <img src="assets/images/Home/dravid.jpg" alt="Dravidian" className="w-full" />
+              <img src="assets/images/Home/dravid.webp" alt="Dravidian" className="w-full" />
               <div className="p-4">
                 <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">Dravidian</h3>
                 <p className="text-gray-600 mb-3 text-sm sm:text-base md:text-lg">Data Engineer</p>

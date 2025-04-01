@@ -24,7 +24,7 @@ export default function Ourmission() {
             {/* Right side image */}
             <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-xl">
                 <img
-                  src="assets/images/About/ourmission.avif"
+                  src="assets/images/About/ourmission.webp"
                   alt="Technology conference presentation"
                   className="w-full h-full object-cover"
                 />

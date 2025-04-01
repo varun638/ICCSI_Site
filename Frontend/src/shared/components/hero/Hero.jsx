@@ -10,7 +10,7 @@ export default function Hero({ props , handleRegisterClick}) {
       <section
         className="min-h-screen bg-cover bg-center relative w-full flex items-center justify-center"
         style={{
-          backgroundImage: 'url("assets/images/Home/bg_img.jpg")',
+          backgroundImage: 'url("assets/images/Home/bg_img.webp")',
           backgroundBlendMode: 'overlay',
           backgroundColor: 'rgba(0, 0, 0, 0.5)',
         }}
@@ -26,7 +26,7 @@ export default function Hero({ props , handleRegisterClick}) {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <div className="flex items-center text-lg sm:text-xl md:text-2xl">
               <Calendar className="w-5 h-5 mr-3" />
-              <span>June 15-17, 2025</span>
+              <span>April 5 - 12, 2025</span>
             </div>
             <div className="flex items-center text-lg sm:text-xl md:text-2xl">
               <MapPin className="w-5 h-5 mr-3" />
